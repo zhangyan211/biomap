@@ -155,6 +155,20 @@ def get_ag_hybrid_feature(coord, chain_mask, cutoff=10):
     # concat_feature = torch.cat([epitope_feature, chain_type_feature, aatype], dim=-1).to(torch.float32)
     # return concat_feature
 
+def get_all_ag_hybrid_feature_yakun(coord, chain_mask, atom_mask, cutoff=10):
+    atom_num = coord.shape[0]
+    p1_coord = coord[~chain_mask]
+    p2_coord = coord[chain_mask]
+
+    p1_residue_num = p1_coord.shape[0]
+    p2_residue_num = p2_coord.shape[0]
+
+    p1_coord = torch.where(p1_coord!=0, p1_coord, torch.inf * torch.ones_like(p1_coord))
+    p2_coord = torch.where(p2_coord!=0, p2_coord, torch.inf * torch.ones_like(p2_coord))
+    p1_coord = p1_coord.reshape(-1, 3)
+    p2_coord = p2_coord.reshape(-1, 3)
+
+    dists = torch.cdist(p1_coord, p2_coord)
 
 def get_all_ag_hybrid_feature(coord, chain_mask, atom_mask, cutoff=10):
     atom_num = coord.shape[0]
