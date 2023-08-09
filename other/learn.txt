@@ -1,0 +1,48 @@
+dice loss
+botorch
+equiformer
+
+
+nan赋值0
+a = torch.where(torch.isnan(a), torch.full_like(a, 0), a)
+inf赋值0
+a = torch.where(torch.isinf(a), torch.full_like(a, 0), a)
+torch.where(condition,T,F) 函数有三个输入值，
+
+    第一个是判断条件，
+
+    第二个是符合条件的设置值，
+
+   第三个是不符合条件的设置值
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pytorch torchvision
+
+nohup  python compute_min_dist.py > test1.txt 2>&1 &
+
+torch.gather(input, dim, index, *, sparse_grad=False, out=None) → Tensor
+
+作用：沿着由dim指定的轴收集数值
+
+pairwise2.align.globalms
+
+list转str
+','.join(list)
+
+
+a.index_put(indices, value)
+indices：tuple(Tensor)格式，要填充的索引。注意这个tuple的size==tensor的维度：
+第一个Tensor是所有待赋值元素的横坐标
+第二个Tensor是所有待赋值元素的纵坐标
+value：Tensor格式，要填充的值，与indices一一对应
+
+
+对字典排序
+a = sorted(d.items(), key=lambda x: x[0]) key
+a = sorted(d.items(), key=lambda x: x[1]) value
+a1 = sorted(d.items(),key = lambda x:x[1],reverse = True) 大到小
+返回list？
+
+
+DataFrame.apply(
+                lambda x: alignment_score(ag_original_seq, x)
+            ).max()
