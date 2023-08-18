@@ -1,7 +1,18 @@
 dice loss
-botorch
 equiformer
+botorch
+torchscale
+SabDab database       agab
+PPBS database
 
+drawio
+
+
+docker ps 查看运行的docker
+docker start
+docker stop
+docker rm
+docker attach 44fc0f0582d9  
 
 nan赋值0
 a = torch.where(torch.isnan(a), torch.full_like(a, 0), a)
