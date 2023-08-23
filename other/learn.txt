@@ -6,13 +6,25 @@ SabDab database       agab
 PPBS database
 
 drawio
+Overleaf
+	https://cn.overleaf.com/
+	zhangy211@nenu.edu.cn
+	a123456789++
+LaTeX
+Mathpix Snip
+	zhangy211@nenu.edu.cn
+	Zy1219698780++
+https://www.latexlive.com/
+	zhangy211@nenu.edu.cn
+	a123456789++
 
 
 docker ps 查看运行的docker
-docker start
+docker start name
 docker stop
 docker rm
-docker attach 44fc0f0582d9  
+docker attach 2b21bff95dff    dMasif
+docker attach dcb2139e273d   pic
 
 nan赋值0
 a = torch.where(torch.isnan(a), torch.full_like(a, 0), a)
